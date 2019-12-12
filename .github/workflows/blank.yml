@@ -21,7 +21,8 @@ jobs:
     - name: CMake find Python
       run: |
         cd ${{ matrix.pyfind }}
-        mkdir build && cd build
+        mkdir build
+        cd build
         cmake ..
         echo "================DUMP CMakeCache.txt================"
         cat CMakeCache.txt
