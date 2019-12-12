@@ -1,0 +1,27 @@
+name: CMake FindPython Tests
+
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        pyfind: [oldPyFind, newPyFind]
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6'
+        architecture: 'x64'
+
+    - name: CMake find Python
+      run: |
+        cd ${{ matrix.pyfind }}
+        mkdir build && cd build
+        cmake ..
+        echo "================DUMP CMakeCache.txt================"
+        cat CMakeCache.txt
