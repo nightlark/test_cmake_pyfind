@@ -1,5 +1,14 @@
 cmake_minimum_required(VERSION 3.4)
 
+set(
+    Python_ADDITIONAL_VERSIONS
+    3.4
+    3.5
+    3.6
+    3.7
+    3.8
+)
+
 find_package(PythonInterp 3)
 find_package(PythonLibs 3)
 message(STATUS "PYTHON_EXECUTABLE ${PYTHON_EXECUTABLE}")
