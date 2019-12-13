@@ -10,6 +10,7 @@ set(
 )
 
 find_package(PythonInterp 3)
+set(Python_ADDITIONAL_VERSIONS "${PYTHON_VERSION_STRING}")
 find_package(PythonLibs 3)
 message(STATUS "PYTHON_EXECUTABLE ${PYTHON_EXECUTABLE}")
 message(STATUS "PYTHON_VERSION_STRING (interp) ${PYTHON_VERSION_STRING}")
