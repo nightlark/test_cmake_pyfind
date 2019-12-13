@@ -18,8 +18,7 @@ jobs:
         python-version: '3.6'
         architecture: 'x64'
 
-    - &findPyStep
-      name: CMake find Python
+    - name: CMake find Python
       run: |
         cd ${{ matrix.pyfind }}
         mkdir build
@@ -28,4 +27,3 @@ jobs:
         echo "================DUMP CMakeCache.txt================"
         cat CMakeCache.txt
         
-    - <<: *findPyStep
