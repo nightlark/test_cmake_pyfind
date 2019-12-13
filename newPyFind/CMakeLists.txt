@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.4)
 
+set(Python3_FIND_STRATEGY "LOCATION")
 find_package(Python3 COMPONENTS Interpreter Development)
 message(STATUS "Python3_EXECUTABLE ${Python3_EXECUTABLE}")
 message(STATUS "Python3_STDLIB ${Python3_STDLIB}")
