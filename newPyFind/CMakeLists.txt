@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.4)
 
-set(Python3_FIND_STRATEGY "LOCATION" CACHE STRING "Strategy for finding Python")
+cmake_policy(SET CMP0094 NEW)
+
+#set(Python3_FIND_STRATEGY "LOCATION")
+
 find_package(Python3 COMPONENTS Interpreter Development)
 message(STATUS "Python3_EXECUTABLE ${Python3_EXECUTABLE}")
 message(STATUS "Python3_STDLIB ${Python3_STDLIB}")
